@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './Header.module.scss'
 
-export default function Header() {
+function Header() {
   return (
     <header className={styles.header}>
       <Link href="/"><h1>Home</h1></Link>
@@ -12,3 +12,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

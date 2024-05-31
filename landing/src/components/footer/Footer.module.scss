@@ -1,0 +1,28 @@
+// Define variables for colors and spacing
+$footer-bg-color: #f8f9fa;
+$footer-text-color: #333;
+$footer-link-color: #0070f3;
+$footer-padding: 1rem;
+
+// Footer container styles
+.footer {
+  //background-color: $footer-bg-color;
+  //color: $footer-text-color;
+  text-align: center;
+  padding: $footer-padding;
+
+  p {
+    margin: 0;
+  }
+
+  // Footer link styles
+  a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
