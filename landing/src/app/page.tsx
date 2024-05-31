@@ -1,7 +1,13 @@
 import messages from './messages'
+import HomeContainer from '@/containers/home-container/HomeContainer';
+
 
 export default function Home() {
   return (
-    <div><h1>{messages.main}</h1></div>
+    <>
+      <HomeContainer>
+        <h1>{messages.main}</h1>
+      </HomeContainer>
+    </>
   );
 }
