@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ChakraProvider } from '@chakra-ui/react'
+import { Providers } from './providers';
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import "./globals.scss";
@@ -20,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <ChakraProvider>
+        <Providers>
           <Header />
           <main className={styles.main}>
             {children}
           </main>
           <Footer />
-        </ChakraProvider>
+        </Providers>
       </body>
     </html>
   );
