@@ -44,9 +44,9 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: Install dependencies
-        run: npm install
+        run: cd landing && npm install
       - name: Build with Next.js
-        run: npm run build
+        run: cd landing && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
