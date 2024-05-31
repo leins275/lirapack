@@ -43,8 +43,6 @@ jobs:
         run: cd landing && npm install
       - name: Build with Next.js
         run: cd landing && npm run build
-      - name: Export with Next.js
-        run: cd landing && npm run export
       - name: Publish
         run: cd landing && npx gh-pages -d out
         env:
