@@ -1,14 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './Header.module.scss'
+import messages from './messages';
+
+
+function HeaderLink (props: { href: string, name: string} ) {
+  return <Link href={props.href}><h1>{props.name}</h1></Link>
+}
 
 function Header() {
   return (
     <header className={styles.header}>
-      <Link href="/"><h1>Home</h1></Link>
-      <Link href="/about"><h1>About</h1></Link>
-      <Link href="/order"><h1>Order</h1></Link>
-      <Link href="/products"><h1>Products</h1></Link>
+      <HeaderLink href={"/"} name={messages.main} />
+      <HeaderLink href={"/about"} name={messages.about} />
+      <HeaderLink href={"/order"} name={messages.order} />
+      <HeaderLink href={"/products"} name={messages.products} />
     </header>
   );
 }

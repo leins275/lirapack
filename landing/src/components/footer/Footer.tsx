@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-
+import messages from './messages';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
-      <p>&copy; 2011 - {currentYear} lirapack.ru. All rights reserved.</p>
+      <p>{messages.footer(currentYear)}</p>
     </footer>
   );
 }
