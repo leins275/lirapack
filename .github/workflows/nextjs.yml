@@ -43,20 +43,7 @@ jobs:
         run: cd landing && npm install
       - name: Build with Next.js
         run: cd landing && npm run build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        run: cd landing
-        with:
-          path: ./out
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish
+        run: cd landing && npx gh-pages -d out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
