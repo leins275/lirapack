@@ -2,7 +2,7 @@
 const nextConfig = {
     output: 'export',
     basePath: '/lirapack',
-    assetPrefix: '/lirapack/',
+    assetPrefix: '/lirapack',
 };
 
 export default nextConfig;
