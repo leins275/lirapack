@@ -14,9 +14,9 @@ function HeaderLogo () {
     <div className={styles.logo}>
       <Link href="/">
         <Image 
-          src="/lirapack/logo.png" 
+          src="/lirapack/logo_new.svg" 
           width={120}
-          height={50}
+          height={90}
           alt="Picture of the author"
         />
       </Link>
